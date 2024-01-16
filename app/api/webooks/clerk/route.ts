@@ -74,6 +74,7 @@ export async function POST(req: Request) {
         }
       })
     }
+    console.log(`create user: ${username}`)
     return NextResponse.json({message: 'OK', user: newUser})
   }
 
@@ -87,13 +88,14 @@ export async function POST(req: Request) {
       photo: image_url
     }
     const updatedUser = await updateUser(id, user);
-
+    console.log(`update user: ${username}`)
     return NextResponse.json({message: 'OK', user: updatedUser})
   }
 
   if (eventType === 'user.deleted') {
     const {id} = evt.data
     const deletedUser = await deleteUser(id!)
+    console.log(`delete user: ${id}`)
     return NextResponse.json({message: 'OK', user: deletedUser})
   }
  
