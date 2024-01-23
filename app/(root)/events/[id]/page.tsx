@@ -23,7 +23,7 @@ const EventDetails = async ({params: {id}, searchParams}: SearchParamProps) => {
           alt="hero image"
           width={1000}
           height={1000}
-          className="h-full min-h-[300px] object-cover object-center"
+          className='h-full min-h-[300px] object-cover object-center'
         />
         <div className='flex w-full flex-col gap-8 p-5 md:p-10'>
           <div className='flex flex-col gap-6'>
@@ -72,7 +72,7 @@ const EventDetails = async ({params: {id}, searchParams}: SearchParamProps) => {
             </div>
           </div>
           <div className='flex flex-col gap-2'>
-            <p className='p-bold-20 text-grey-50'>What You'll Learn;</p>
+            <p className='p-bold-20 text-grey-50'>What You&apos;ll Learn;</p>
             <p className='p-medium-16 lg:p-regular-18'>{event.deescription}</p>
             <p className='p-medium-16 lg:p-regular-18 truncate text-primary-500 underline'>{event.url}</p>
           </div>
